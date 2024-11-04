@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brgy. Silangan Napapatid</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    
+    <!-- Logo Image -->
+    <img src="logo.webp" alt="Barangay Logo" class="logo">
+    
+    
+    <nav class="nav-center">
+        <ul class="main-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+        </ul>
+      </nav>
+  </header>
+
+  <div class="content-container">
+    <section class="content">
+      <p>
+        Welcome to the Barangay Silangan Napapatid Website! <br><br>
+
+        Explore our site to discover essential information about our community services, upcoming events, and important announcements. We are dedicated to supporting the residents of Silangan Napapatid and fostering a vibrant, engaged community. Thank you for visiting, and we look forward to serving you!
+      </p>
+      <button id="subscribeBtn">Subscribe to Newsletter</button>
+    </section>
+  
+    <!-- Pop-up Newsletter Form -->
+    <div class="popup" id="newsletterPopup">
+      <div class="popup-content">
+        <span class="close-btn" id="closeBtn">&times;</span>
+        <h2>Subscribe to our Newsletter</h2>
+        <form>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          <br>
+  
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+  
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+/* General Styles */
+html, body {
+    height: 100%; /* Ensure body and html take up the full height */
+    margin: 0;    /* Remove default margin */
+    padding: 0;   /* Remove default padding */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: Arial, sans-serif;
+    background-image: url('bg.png'); /* Add your image path here */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px;
+}
+
+.logo {
+    width: 130px; /* Logo size */
+    height: 130px; /* Logo size */
+    border-radius: 50%; /* Circular logo */
+    object-fit: cover; /* Cover the image */
+    margin-left: 20px; /* Space on the left */
+}
+
+.nav-center {
+    flex-grow: 1; /* Allow nav to grow and fill available space */
+    text-align: center; /* Center nav items */
+}
+
+.main-menu {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: inline-flex; /* Display items in a row */
+    gap: 350px; /* Space between menu items */
+    margin: 0; /* Remove margin */
+}
+
+.main-menu a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 18px; /* Link font size */
+    font-weight: bold; /* Bold links */
+    position: relative; /* For border hover effect */
+    padding: 5px 10px; /* Space around text */
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.main-menu a::after {
+    content: ""; /* Add a pseudo-element */
+    position: absolute;
+    bottom: -3px; /* Position it right below the link */
+    left: 0;
+    right: 0;
+    height: 3px; /* Height of the underline effect */
+    background-color: #3498db; /* Color of the hover effect */
+    transform: scaleX(0); /* Start with it hidden */
+    transform-origin: right; /* Start animation from the right */
+    transition: transform 0.3s ease; /* Smooth expand effect */
+}
+
+.main-menu a:hover::after {
+    transform: scaleX(1); /* Expand it to full width on hover */
+    transform-origin: left; /* Animate from left to right */
+}
+
+.main-menu a:hover {
+    color: #3498db; /* Change text color on hover */
+}
+
+/* Content Styles */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #3498db; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #2980b9; /* Button hover color */
+}
+
+/* Pop-up Styles */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position */
+    background-color: white; /* Popup background */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Shadow */
+    padding: 20px; /* Popup padding */
+    z-index: 1000; /* Ensure it is on top */
+    width: 300px; /* Popup width */
+}
+
+.popup-content {
+    text-align: center; /* Center popup text */
+}
+
+.close-btn {
+    position: absolute; /* Positioning for close button */
+    top: 10px; /* Adjust position */
+    right: 10px; /* Adjust position */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 20px; /* Font size */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .nav-center {
+        text-align: center; /* Center nav on smaller screens */
+    }
+
+    .main-menu {
+        justify-content: center; /* Center the menu */
+        gap: 10px; /* Adjust gap for smaller screens */
+    }
+
+    .main-menu li {
+        margin: 5px 0; /* Stack menu items with spacing */
+    }
+}
+
+.content-container {
+    background-color: rgba(255, 255, 255, 0.3); /* Very light transparent white */
+    padding: 20px; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    margin: 20px auto; /* Center the container with margin */
+    max-width: 1150px; /* Max width of the container */
+    backdrop-filter: blur(10px); /* Optional: blur background for frosted-glass effect */
+    min-height: calc(100vh - 550px); /* Set min height to fill the viewport */
+}
+
+
+.content {
+    text-align: center; /* Center text inside the content section */
+}
+
+button {
+    background-color: #3498db; /* Button color */
+    color: white; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded button corners */
+}
+
+button:hover {
+    background-color: #2980b9; /* Button hover color */
+}
